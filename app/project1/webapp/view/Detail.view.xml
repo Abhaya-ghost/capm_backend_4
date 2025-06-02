@@ -1,0 +1,48 @@
+<mvc:View
+  controllerName="project1.controller.Detail"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form">
+  
+  <Page title="Order Detail" showNavButton="true" navButtonPress="onNavBack" id="page">
+    <f:SimpleForm
+      id="orderDetailForm"
+      editable="false"
+      layout="ResponsiveGridLayout"
+      labelSpanL="4" labelSpanM="4"
+      emptySpanL="2" emptySpanM="2"
+      columnsL="1" columnsM="1">
+
+      <Label text="Order ID" id="labelId"/>
+      <Text text="{ID}"  id="id"/>
+
+      <Label text="Customer Name" id="labelName"/>
+      <Text text="{customerName}"  id="name"/>
+
+      <Label text="Customer Email" id="labelEmail"/>
+      <Text text="{customerEmail}" id="email"/>
+
+      <Label text="Customer No" id="labelNo"/>
+      <Text text="{customerNo}" id="no"/>
+
+      <Label text="Category Name" id="labelCategory"/>
+      <Text text="{categoryName}" id="category"/>
+
+      <Label text="Product Name" id="labelProduct"/>
+      <Text text="{productName}" id="product"/>
+
+      <Label text="Supplier" id="labelSupplier"/>
+      <Text text="{supplier/name}" id="supplier"/>
+
+      <Label text="Supplier Location" id="la"/>
+      <Text text="{supplier/location}" id="lab"/>
+
+      <Label text="Region" id="regionlab"/>
+      <Text text="{regionName}" id="regi"/>
+
+      <Label text="Created At" id="at"/>
+      <Text text="{createdAt}" id="created"/>
+    </f:SimpleForm>
+  </Page>
+</mvc:View>

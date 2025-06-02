@@ -1,0 +1,8 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="project1.controller.TileList">
+  <Page title="Order Details" id="tilePage">
+    <content>
+      <VBox id="tileContainer" class="sapUiSmallMargin"/>
+    </content>
+  </Page>
+
+</mvc:View>

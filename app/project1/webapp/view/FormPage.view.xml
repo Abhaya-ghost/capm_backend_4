@@ -1,0 +1,103 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="project1.controller.FormPage">
+  <Page title="Order Form" id="formPage">
+    <content>
+      <VBox class="registrationWrapper" id="formVbox">
+      <VBox class="registrationWrapper1" id="formVbox1">
+
+        <l:VerticalLayout
+                    id="MainLayout"
+                    width="100%"
+                >
+
+                  <Input id="customerName" placeholder="Customer Name"/>
+        <Input id="customerEmail" placeholder="Email"/>
+        <Input id="customerNo" type="Number" placeholder="Customer Number"/>
+
+                    <Label
+                        id="categoryLabel"
+                        text="Select Category"
+                        labelFor="categorySelect"
+                    />
+                    <Select
+                        id="categorySelect"
+                        items="{/Categories}"
+                    >
+                        <items>
+                            <core:Item
+                                id="_IDGenItem"
+                                key="{ID}"
+                                text="{name}"
+                            />
+                        </items>
+                    </Select>
+                    <Label
+                        id="productLabel"
+                        text=" Select Product"
+                        labelFor="productSelect"
+                    />
+                    <Select
+                        id="productSelect"
+                        items="{/Products}"
+                    >
+                        <items>
+                            <core:Item
+                                id="_IDGenItem11"
+                                key="{ID}"
+                                text="{name}"
+                            />
+                        </items>
+                    </Select>
+                    <Label
+                        id="supplierLabel"
+                        text=" Select Supplier"
+                        labelFor="supplierSelect"
+                    />
+                    <Select
+                        id="supplierSelect"
+                        items="{/Suppliers}"
+                    >
+                        <items>
+                            <core:Item
+                                id="_IDGenItem12"
+                                key="{ID}"
+                                text="{name}"
+                            />
+                        </items>
+                    </Select>
+                    <Label
+                        id="regionLabel"
+                        text=" Select Region"
+                        labelFor="regionSelect"
+                    />
+                    <Select
+                        id="regionSelect"
+                        items="{/Regions}"
+                    >
+                        <items>
+                            <core:Item
+                                id="_IDGenItem2"
+                                key="{ID}"
+                                text="{name}"
+                            />
+                        </items>
+                    </Select>
+                    <Button
+                        id="SubmitButton"
+                        text="Submit"
+                        type="Emphasized"
+                        class="sapUiSmallMarginTop"
+                        press=".onSubmit"
+                    />
+                    <Button
+    id="HistoryButton"
+    text="View Orders"
+    type="Default"
+    class="sapUiSmallMarginTop"
+    press=".onNavigateToHistory"
+/>
+                </l:VerticalLayout>
+                </VBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>
